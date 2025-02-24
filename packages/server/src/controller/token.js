@@ -57,11 +57,21 @@ module.exports = class extends BaseRest {
     }
     user[0].avatar = avatarUrl;
 
+    const token = jwt.sign(user[0].email, this.config('jwtKey'));
+
+    // 设置 cookie,有效期 7 天
+    this.ctx.cookies.set('WALINE_TOKEN', token, {
+      maxAge: 7 * 24 * 60 * 60 * 1000, // 7天有效期
+      path: '/',
+      httpOnly: true, // 仅服务端可访问
+      sameSite: 'lax', // 防止 CSRF
+    });
+
     return this.success({
       ...user[0],
       password: null,
       mailMd5: helper.md5(user[0].email.toLowerCase()),
-      token: jwt.sign(user[0].email, this.config('jwtKey')),
+      token,
     });
   }
 
