@@ -31,7 +31,11 @@ export default function () {
 
     const query = new URLSearchParams(location.search);
     const isAdmin = user.type === 'administrator';
-
+    const r = query.get('r');
+    if (r) {
+      window.location.href = decodeURIComponent(r);
+      return;
+    }
     const defaultRedirect = isAdmin ? '/ui/profile' : '/ui';
     const redirect =
       isAdmin && query.get('redirect')
@@ -99,7 +103,8 @@ export default function () {
     baseUrl = match ? match[1] : '/';
   }
 
-  const socials = ['qq', 'weibo', 'github', 'twitter', 'facebook'];
+  // const socials = ['qq', 'weibo', 'github', 'twitter', 'facebook'];
+  const socials = ['qq', 'weibo', 'github'];
 
   return (
     <>
