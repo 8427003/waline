@@ -1,6 +1,6 @@
 {
-  "name": "@waline/admin",
-  "version": "0.26.0",
+  "name": "@8427003/waline-admin",
+  "version": "0.26.1",
   "description": "management system for waline",
   "keywords": [
     "waline",
@@ -30,7 +30,8 @@
     "build": "NODE_ENV=production vite build",
     "clean": "rimraf ./dist",
     "dev": "vite",
-    "prepublishOnly": "pnpm build"
+    "prepublishOnly": "pnpm build",
+    "publish": "npm publish --provenance=false --access public"
   },
   "browserslist": {
     "production": [

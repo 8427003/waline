@@ -6,8 +6,8 @@ import type {
   WalineComment,
   WalineCommentStatus,
   WalineRootComment,
-} from '@waline/api';
-import { deleteComment, getComment, updateComment } from '@waline/api';
+} from '@8427003/waline-api';
+import { deleteComment, getComment, updateComment } from '@8427003/waline-api';
 import { computed, onMounted, onUnmounted, provide, ref } from 'vue';
 
 import ArticleReaction from './ArticleReaction.vue';

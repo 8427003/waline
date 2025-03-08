@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { useNow } from '@vueuse/core';
-import type { WalineComment, WalineCommentStatus } from '@waline/api';
+import type { WalineComment, WalineCommentStatus } from '@8427003/waline-api';
 import { computed, inject } from 'vue';
 
 import CommentBox from './CommentBox.vue';

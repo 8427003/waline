@@ -1,5 +1,5 @@
-import type { RecentCommentData } from '@waline/api';
-import { getRecentComment } from '@waline/api';
+import type { RecentCommentData } from '@8427003/waline-api';
+import { getRecentComment } from '@8427003/waline-api';
 
 import { useUserInfo } from '../composables/index.js';
 import { getRoot } from '../utils/index.js';

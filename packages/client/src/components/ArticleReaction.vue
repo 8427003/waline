@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { getArticleCounter, updateArticleCounter } from '@waline/api';
+import { getArticleCounter, updateArticleCounter } from '@8427003/waline-api';
 import { computed, inject, onMounted, onUnmounted, ref } from 'vue';
 
 import { LoadingIcon } from './Icons.js';
@@ -123,8 +123,6 @@ onUnmounted(() => {
 
 <template>
   <div v-if="reactionsInfo" class="wl-reaction">
-    <div class="wl-reaction-title" v-text="locale.reactionTitle" />
-
     <ul class="wl-reaction-list">
       <li
         v-for="({ active, icon, desc }, index) in reactionsInfo"

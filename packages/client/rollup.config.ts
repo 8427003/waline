@@ -106,7 +106,7 @@ export default [
     treeshake: 'smallest',
     external: [
       '@vueuse/core',
-      '@waline/api',
+      '@8427003/waline-api',
       'autosize',
       'marked',
       'marked-highlight',
@@ -127,7 +127,7 @@ export default [
     ],
     external: [
       '@vueuse/core',
-      '@waline/api',
+      '@8427003/waline-api',
       'autosize',
       'marked',
       'marked-highlight',

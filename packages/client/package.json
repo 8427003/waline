@@ -1,6 +1,6 @@
 {
-  "name": "@waline/client",
-  "version": "3.5.5",
+  "name": "@8427003/waline-client",
+  "version": "3.5.22",
   "description": "client for waline comment system",
   "keywords": [
     "valine",
@@ -64,7 +64,8 @@
     "rollup": "rollup -c rollup.config.ts --configPlugin esbuild",
     "style": "pnpm style:main && pnpm style:meta",
     "style:main": "sass ./src/styles/index.scss ./dist/waline.css --style=compressed",
-    "style:meta": "sass ./src/styles/meta.scss ./dist/waline-meta.css --style=compressed"
+    "style:meta": "sass ./src/styles/meta.scss ./dist/waline-meta.css --style=compressed",
+    "publish": "pnpm  publish --access public --filter @8427003/waline-client --no-git-check"
   },
   "browserslist": {
     "production": [
@@ -82,8 +83,8 @@
     ]
   },
   "dependencies": {
+    "@8427003/waline-api": "workspace:*",
     "@vueuse/core": "^12.7.0",
-    "@waline/api": "workspace:*",
     "autosize": "^6.0.1",
     "marked": "^15.0.7",
     "marked-highlight": "^2.2.1",
@@ -103,6 +104,6 @@
     "node": ">=18"
   },
   "publishConfig": {
-    "provenance": true
+    "provenance": false
   }
 }

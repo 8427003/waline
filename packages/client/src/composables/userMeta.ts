@@ -1,0 +1,1 @@
+import type { WalineCommentData } from '@8427003/waline-api'; 

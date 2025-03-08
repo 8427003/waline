@@ -47,15 +47,19 @@ export const user = {
         turnstile,
       });
 
+      const data = { token, remember, ...user }
       if (token) {
         window.TOKEN = token;
         sessionStorage.setItem('TOKEN', token);
+        sessionStorage.setItem('WALINE_USER', JSON.stringify(data));
         if (remember) {
           localStorage.setItem('TOKEN', token);
+          localStorage.setItem('WALINE_USER', JSON.stringify(data));
         }
+
         if (window.opener) {
           window.opener.postMessage(
-            { type: 'userInfo', data: { token, remember, ...user } },
+            { type: 'userInfo', data },
             '*',
           );
         }

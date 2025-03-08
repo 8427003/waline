@@ -89,7 +89,7 @@
       "sqlite3"
     ],
     "overrides": {
-      "@waline/api": "workspace:*"
+      "@8427003/waline-api": "workspace:*"
     }
   },
   "apidoc": {

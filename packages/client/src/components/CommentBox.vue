@@ -5,8 +5,8 @@ import {
   useEventListener,
   watchImmediate,
 } from '@vueuse/core';
-import type { WalineComment, WalineCommentData, UserInfo } from '@waline/api';
-import { addComment, login, updateComment } from '@waline/api';
+import type { WalineComment, WalineCommentData, UserInfo } from '@8427003/waline-api';
+import { addComment, login, updateComment } from '@8427003/waline-api';
 import autosize from 'autosize';
 import type { DeepReadonly } from 'vue';
 import {

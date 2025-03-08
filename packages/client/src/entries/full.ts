@@ -1,4 +1,4 @@
-export * from '@waline/api';
+export * from '@8427003/waline-api';
 export { DEFAULT_LOCALES as defaultLocales } from '../config/index.js';
 export * from '../comment.js';
 export * from '../init.js';
